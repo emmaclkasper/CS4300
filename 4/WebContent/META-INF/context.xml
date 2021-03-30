@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Resource
+name="jdbc/mvc"
+driverClassName="com.mysql.jdbc.Driver"
+url="jdbc:mysql://localhost:3306/JEE"
+type="javax.sql.DataSource"
+username="root"
+password=""
+auth="Container"
+maxActive="8" />
+</Context>

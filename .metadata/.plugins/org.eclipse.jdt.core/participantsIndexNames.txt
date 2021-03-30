@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+/Users/emmacaroline/Eclipse/CS4300/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2736516131.index
+/DBConnection/src
+/Users/emmacaroline/Eclipse/CS4300/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3166076078.index
+/test/src
+/Users/emmacaroline/Eclipse/CS4300/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3526643215.index
+/integratedproject/src
+/Users/emmacaroline/Eclipse/CS4300/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3082874910.index
+/test/src
+/Users/emmacaroline/Eclipse/CS4300/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/703827765.index
+/test2/src

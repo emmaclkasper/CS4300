@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSE Apparel | Store</title>
+<meta name="" content="Ecommerce webpage">
+<link rel="stylesheet" href="stylesheet.css" />
+<script src="index.js" async></script>
+</head>
+<body>
+	<header class="header">
+		<nav class="main-nav nav">
+			<ul>
+				<li><a href="index.html">STORE</a></li>
+				<li><a href="cart.html">CART</a></li>
+			</ul>
+		</nav>
+		<h1 class="logo">JSE Apparel</h1>
+	</header>
+	<section class="container">
+		<div class="store">
+			<div class="store-item">
+				<span class="item">Nike Air Mags</span> <img class="pix"
+					src="Images/Shoes/nikemags.jpg">
+				<div class="details">
+					<span class="price">$3,000.00</span>
+					<button class="add" type="button">ADD TO CART</button>
+				</div>
+			</div>
+			<div class="store-item">
+				<span class="item">Womens Gucci Belt</span> <img class="pix"
+					src="Images//Accessories/womensgucci.jpg">
+				<div class="details">
+					<span class="price">$460.00</span>
+					<button class="add" type="button">ADD TO CART</button>
+				</div>
+			</div>
+			<div class="store-item">
+				<span class="item">Gucci Snake Belt</span> <img class="pix"
+					src="Images/Accessories/guccisnake.jpg">
+				<div class="details">
+					<span class="price">$750.00</span>
+					<button class="add" type="button">ADD TO CART</button>
+				</div>
+			</div>
+			<div class="store-item">
+				<span class="item">Off White Belt</span> <img class="pix"
+					src="Images/Accessories/offwhite.jpg">
+				<div class="details">
+					<span class="price">$200.00</span>
+					<button class="add" type="button">ADD TO CART</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="container content-section">
+
+		<div class="store">
+			<div class="store-item">
+				<span class="item">Rolex Submariner</span> <img class="pix"
+					src="Images/Accessories/submariner.jpg">
+				<div class="details">
+					<span class="price">$11,500.00</span>
+					<button class="add btn-primary " type="button">ADD TO CART</button>
+				</div>
+			</div>
+			<div class="store-item">
+				<span class="item">Omega Seamaster</span> <img class="pix"
+					src="Images/Accessories/omegaseamaster.jpg">
+				<div class="details">
+					<span class="price">$4,275.00</span>
+					<button class="add btn-primary " type="button">ADD TO CART</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>

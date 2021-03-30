@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<form method="post" action="database.jsp">
+		<h1 name="gucci">Womens Gucci belt</h1>
+		<p name="price">$460.00>
+		<p>
+	</form>
+</body>
+</html>

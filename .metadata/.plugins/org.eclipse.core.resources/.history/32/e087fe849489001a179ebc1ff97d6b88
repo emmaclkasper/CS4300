@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 1</title>
+<link rel="stylesheet" href="stylesheet.css">
+<script src="pages.js"></script>
+</head>
+<body>
+
+<table id="accessories">
+
+<tr>
+<td> Gucci Belt</td>
+</tr>
+
+<tr>
+
+</tr>
+
+<tr>
+
+</tr>
+
+	<form action="database.jsp" method="post">
+		<button>Add to Cart</button>
+	</form>
+
+
+
+</table>
+
+
+
+</body>
+</html>

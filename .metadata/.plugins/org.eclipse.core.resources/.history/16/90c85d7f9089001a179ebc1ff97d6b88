@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment 1</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="pages.js"></script>
+    </head>
+    <body>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shoes.html">Shoeline</a></li>
+            <li><a href="clothes.html">Clothes</a></li>
+            <li><a class="active" href="accessory.html">Accessories</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+          </ul>
+          <div>
+          <form style="margin-left: 60%;" action="http://www.google.com/search" method="get" target="_blank">
+            <fieldset>
+                <input type="search" name="q">
+                <input type="hidden" name="sitesearch" value="index.html">
+                <button type="submit">Search</button>
+            </fieldset>
+        </form>
+      </div>
+          <div style="margin-left:10%;padding:1px 16px;height:1000px;">
+            <h1>JSE Apparel</h1>
+            <h2>Accessories</h2>
+            <div id="myBtnContainer">
+              <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+              <button class="btn" onclick="filterSelection('men')"> Belts</button>
+              <button class="btn" onclick="filterSelection('wo')"> Watches</button>
+            </div>
+            <div class="container">
+              <div class="card men">
+              <img class="pix" src="Images/Accessories/womensgucci.jpg" alt="belts">
+              <h4 id="Gucci Belt"> Womens Gucci Belt</h4>
+              <p id="460.00" >$460.00</p>
+              <p><form action ="database.jsp" method="post"> <button>Add to Cart</button></form></p>
+            </div>
+            
+            
+            <div class="card men">
+              <img class="pix" src="Images/Accessories/mensgucci.jpg" alt="belts">
+              <h4>Mens Gucci Belt</h4>
+              <p class="price">$460.00</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+            
+            
+            <div class="card men">
+              <img class="pix" src="Images/Accessories/guccisnake.jpg" alt="belts">
+              <h4>Gucci Snake Belt</h4>
+              <p class="price">$750.00</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+            
+            
+            <div class="card men">
+              <img class="pix" src="Images/Accessories/offwhite.jpg" alt="belts">
+              <h4>Off White Belt</h4>
+              <p class="price">$200.00</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+            
+            
+               <div class="card men">
+              <img class="pix" src="Images/Accessories/hermes.jpg" alt="belts">
+              <h4>Hermes Belt</h4>
+              <p class="price">$1,200.00</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+
+            <div class="card men">
+              <img class="pix" src="Images/Accessories/versace.jpg" alt="belts">
+              <h4>Versace Belt</h4>
+              <p class="price">$475.00</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+
+
+            <div class="card wo">
+              <img class="pix" src="Images/Accessories/submariner.jpg" alt="watches">
+              <h4>Rolex Submariner</h4>
+              <p class="price">$11,500</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+        
+            <div class="card wo">
+              <img class="pix" src="Images/Accessories/nixon.jpg" alt="watches">
+              <h4>Nixon</h4>
+              <p class="price">$300.00</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+           
+            <div class="card wo">
+              <img class="pix" src="Images/Accessories/vincero.jpg" alt="watches">
+              <h4>Vincero</h4>
+              <p class="price">$169.00</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+        
+            <div class="card wo">
+              <img class="pix" src="Images/Accessories/versacewatch.jpg" alt="watches">
+              <h4>Versace</h4>
+              <p class="price">$1,695.00</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+         
+            <div class="card wo">
+              <img class="pix" src="Images/Accessories/omegaseamaster.jpg" alt="watches">
+              <h4>Omega Seamaster</h4>
+              <p class="price">$4,275.00</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+        
+            <div class="card wo">
+              <img class="pix" src="Images/Accessories/tissotgentleman.jpg" alt="watches">
+              <h4>Tissot Gentleman</h4>
+              <p class="price">$375.00</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+           
+    </div>
+  </div>   
+
+            
+          <script>
+            filterSelection("all")
+            function filterSelection(c) {
+              var x, i;
+              x = document.getElementsByClassName("card");
+              if (c == "all") c = ""; document.body.style.backgroundImage = "url('Images/background.jpg')";
+              if(c == "belts") document.body.style.backgroundImage = "url('Images/background.jpg')";
+              if(c == "watches") document.body.style.backgroundImage = "url('Images/background.jpg')";
+              for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+              }
+            }
+            
+            function w3AddClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+              }
+            }
+            
+            function w3RemoveClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                  arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
+              }
+              element.className = arr1.join(" ");
+            }
+            
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function(){
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+              });
+            }          
+            </script>
+         
+    </body>
+</html>

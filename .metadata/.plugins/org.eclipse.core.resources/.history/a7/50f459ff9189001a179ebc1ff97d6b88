@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment 1</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="pages.js"></script>
+    </head>
+    <body>
+        
+            <div class="container">
+              <div class="card men">
+              <img class="pix" src="Images/Accessories/womensgucci.jpg" alt="belts">
+              <label name="item">Womens Gucci Belt</label>
+              <p name="price">$460.00</p>
+              <p><form action ="database.jsp" method="post"> <button>Add to Cart</button></form></p>
+            </div>
+            
+      
+ 
+
+        
+         
+    </body>
+</html>

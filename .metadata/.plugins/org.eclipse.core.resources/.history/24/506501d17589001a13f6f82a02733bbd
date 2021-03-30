@@ -1,0 +1,78 @@
+package Week12;
+
+
+import java.io.*;
+import java.sql.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class second_servlet
+ */
+@WebServlet("/Week12")
+public class Week12 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Week12() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		doPost(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.println("<html><head>");
+		out.println("<title>JDBC-Servlet Example</title>");
+		out.println("</head><body><h1>JDBC Connection example</h1>");
+	   // System.out.println("here");
+	 
+		String query = "SELECT code, name FROM country WHERE continent = 'North America' and (code = ? or code = ?)";
+		String id = "can"; //request.getParameter("id")  in JSP
+		String id_2 = "usa";
+		
+		try { //need a try-catch in case there is a runtime error
+			String dbURL = "jdbc:mysql://localhost:3306/world?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+			Connection connection = DriverManager.getConnection(dbURL, "root", "password"); //returns an object whose type is Connection 
+			PreparedStatement pstmt = connection.prepareStatement(query); //this can be any type of SQL command
+			//returns an object that is of type PreparedStatement
+			
+			pstmt.setString(1,  id); //this fills in the gaps you have from above (the question marks) -- the data you're going to insert is a String (hence setString)
+			//first parameter = how many gaps; second parameter = what you want to fill gaps with 
+			
+			pstmt.setString(2,  id_2);
+			
+			//this executes the query
+			ResultSet rs = pstmt.executeQuery(); //returns a table of the result 
+			
+			//get the result and process it row by row
+			while(rs.next()) 
+				System.out.println(rs.getString(1) + "\t" + rs.getString(2)); //get two Strings because in SELECT you want code and name (2 things)
+			connection.close(); //when you're done working with the database 
+		} catch (SQLException e) {
+			e.printStackTrace();
+			
+			} 
+	  out.println("</body></html>");
+	  out.close();	
+		
+	}
+
+}
